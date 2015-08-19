@@ -1,0 +1,20 @@
+<md-list class="chat-list">
+    <md-list-item ng-repeat="message in chat.messages">
+        <img ng-src="/libs/material-design-icons/social/1x_web/ic_person_black_36dp.png" class="md-avatar" alt="{{message.user}}" />
+        <div class="md-list-item-text">
+            <span class="message-user">
+                {{message.user}}
+            </span><span class="message-date">{{message.date | date : 'shortTime'}}</span>
+            <p class="message-text" ng-bind="message.text "></p>
+        </div>
+        <md-divider></md-divider>
+    </md-list-item>
+</md-list>
+<md-input-container md-no-float class="md-whiteframe-z2 message-input" ng-class="{'message-input': !isMobile(), 'message-input-mobile': isMobile()}">
+    <form ng-submit="sendMessage(chat.currentMessage)">
+        <input ng-model="chat.currentMessage.text" placeholder="Message...">
+        <md-button class="md-icon-button md-mini" aria-label="Send">
+            <md-icon md-svg-src="/libs/material-design-icons/content/svg/design/ic_send_24px.svg"></md-icon>
+        </md-button>
+    </form>
+</md-input-container>

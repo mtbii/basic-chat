@@ -1,0 +1,40 @@
+{
+  "name": "basic-chat",
+  "main": "index.js",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Brunson <mbrunson94@gmail.com>"
+  ],
+  "description": "Real-time chat application using Node.js and socket.io",
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "socket.io",
+    "chat",
+    "chatroom"
+  ],
+  "license": "MIT",
+  "homepage": "www.mtbii.me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.13.2",
+    "bootstrap": "~3.3.5",
+    "components-font-awesome": "~4.4.0",
+    "angular-animate": "~1.4.3",
+    "angular-scroll-glue": "~2.0.6",
+    "angular-material": "~0.10.1",
+    "material-design-icons": "~2.0.0"
+  },
+  "resolutions": {
+    "angular": "1.4.4"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/libs/angular-material/angular-material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <title>ChatUp!</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <script src="https://cdn.socket.io/socket.io-1.3.6.js"></script>
+    <script src="/libs/angular/angular.js"></script>
+    <script src="/libs/angular-aria/angular-aria.js"></script>
+    <script src="/libs/angular-animate/angular-animate.js"></script>
+    <script src="/libs/angular-material/angular-material.js"></script>
+
+    <script src="/libs/jquery/dist/jquery.js "></script>
+    <script src="/libs/bootstrap/dist/js/bootstrap.js "></script>
+    <script src="/libs/angular-ui-router/release/angular-ui-router.js "></script>
+    <script src="/libs/angular-bootstrap/ui-bootstrap.js "></script>
+    <script src="/libs/angular-scroll-glue/src/scrollglue.js"></script>
+    <script src="/app/services/ChatService.js"></script>
+    <script src="/app/services/SocketService.js"></script>
+    <script src="/app/app.js "></script>
+</head>
+
+<body ng-app="chat-up" layout="column">
+    <div ui-view class="full-height"></div>
+</body>
+
+</html>

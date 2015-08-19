@@ -1,0 +1,6 @@
+{
+    "name": "Basic chat",
+    "description": "Real-time chat application using Node.js and socket.io",
+    "logo": "http://node-js-sample.herokuapp.com/node.svg",
+    "keywords": ["node", "express", "static"]
+}
