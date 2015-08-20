@@ -19,7 +19,9 @@ var io = require('socket.io').listen(app.listen(app.get('port'), function () {
 
 io.sockets.on('connection', function (socket) {
     socket.emit('message', {
-        user: 'ChatUp!',
+        user: {
+            name: 'ChatUp!',
+        },
         text: 'Welcome to the chat!',
         date: new Date()
     });
@@ -27,18 +29,22 @@ io.sockets.on('connection', function (socket) {
     socket.on('ready', function (data) {
         console.log('New user : ' + data.user);
         io.sockets.emit('message', {
-            user: 'ChatUp!',
+            user: {
+                name: 'ChatUp!',
+                avatar: ''
+            },
             text: 'New user joined: ' + data.user,
             date: new Date()
         });
     });
 
-    socket.on('disconnect', function () {
+    socket.on('disconnect', function (evt) {
         console.log('Disconnect');
+        console.log(evt);
     });
 
     socket.on('send', function (data) {
-        console.log(data.user + ' : ' + data.text);
+        console.log(data.user.name + ' : ' + data.text);
         socket.broadcast.emit('message', data);
     })
 });
